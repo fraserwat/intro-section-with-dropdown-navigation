@@ -1,0 +1,8 @@
+@mixin flex-gap($n) {
+    display: inline-flex;
+    gap: get-size($n);
+}
+
+.flex-gap-400 {
+    @include flex-gap('400');
+}

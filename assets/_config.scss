@@ -1,0 +1,21 @@
+$gorko-colors: (
+  'black': #151515,
+  'white': #FAFAFA,
+  'grey': #686868
+);
+
+.bg-black {
+    background-color: get-color('black');
+}
+.bg-white {
+    background-color: get-color('white');
+}
+.font-black {
+    color: get-color('black');
+}
+.font-grey {
+    color: get-color('grey');
+}
+.font-white {
+    color: get-color('white');
+}

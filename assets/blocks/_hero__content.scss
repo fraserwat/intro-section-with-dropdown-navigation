@@ -1,0 +1,8 @@
+.hero__content {
+    margin-top: 3rem;
+}
+@media (min-width: 48em) {
+    .hero__content {
+        margin-block: auto;
+    }
+}

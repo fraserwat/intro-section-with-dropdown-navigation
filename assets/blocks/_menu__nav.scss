@@ -1,0 +1,6 @@
+.menu__nav {
+}
+
+.menu__nav:not(.active) {
+    display: none;
+}

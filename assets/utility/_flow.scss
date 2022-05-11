@@ -1,0 +1,9 @@
+.flow > * + * {
+    margin-top: get-size("500");
+}
+
+@media screen and (min-width: 48em) {
+    .flow > * + * {
+        margin-top: get-size("900");
+    }
+}

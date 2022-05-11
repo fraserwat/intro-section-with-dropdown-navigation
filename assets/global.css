@@ -1,0 +1,663 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+
+/*
+    3. Allow percentage-based heights in the application
+  */
+html, body {
+  height: 100%;
+}
+
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+    6. Improve media defaults
+  */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+    7. Remove built-in form typography styles
+  */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/*
+    8. Avoid text overflows
+  */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+    9. Create a root stacking context
+  */
+#root, #__next {
+  isolation: isolate;
+}
+
+li, ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* GORKO: auto-generated utility classes start */
+.bg-dark {
+  background: #1a1a1a;
+}
+
+.bg-light {
+  background: #f3f3f3;
+}
+
+.color-dark {
+  color: #1a1a1a;
+}
+
+.color-light {
+  color: #f3f3f3;
+}
+
+.box-block {
+  display: block;
+}
+
+.box-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.box-hide {
+  display: none;
+}
+
+.box-show {
+  display: inherit;
+}
+
+.font-base {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.gap-top-300 {
+  margin-top: 0.8rem;
+}
+
+.gap-top-400 {
+  margin-top: 1rem;
+}
+
+.gap-top-500 {
+  margin-top: 1.25rem;
+}
+
+.gap-top-600 {
+  margin-top: 1.6rem;
+}
+
+.gap-top-700 {
+  margin-top: 2rem;
+}
+
+.gap-top-900 {
+  margin-top: 3rem;
+}
+
+.gap-right-300 {
+  margin-right: 0.8rem;
+}
+
+.gap-right-400 {
+  margin-right: 1rem;
+}
+
+.gap-right-500 {
+  margin-right: 1.25rem;
+}
+
+.gap-right-600 {
+  margin-right: 1.6rem;
+}
+
+.gap-right-700 {
+  margin-right: 2rem;
+}
+
+.gap-right-900 {
+  margin-right: 3rem;
+}
+
+.gap-bottom-300 {
+  margin-bottom: 0.8rem;
+}
+
+.gap-bottom-400 {
+  margin-bottom: 1rem;
+}
+
+.gap-bottom-500 {
+  margin-bottom: 1.25rem;
+}
+
+.gap-bottom-600 {
+  margin-bottom: 1.6rem;
+}
+
+.gap-bottom-700 {
+  margin-bottom: 2rem;
+}
+
+.gap-bottom-900 {
+  margin-bottom: 3rem;
+}
+
+.gap-left-300 {
+  margin-left: 0.8rem;
+}
+
+.gap-left-400 {
+  margin-left: 1rem;
+}
+
+.gap-left-500 {
+  margin-left: 1.25rem;
+}
+
+.gap-left-600 {
+  margin-left: 1.6rem;
+}
+
+.gap-left-700 {
+  margin-left: 2rem;
+}
+
+.gap-left-900 {
+  margin-left: 3rem;
+}
+
+.pad-top-300 {
+  padding-top: 0.8rem;
+}
+
+.pad-top-400 {
+  padding-top: 1rem;
+}
+
+.pad-top-500 {
+  padding-top: 1.25rem;
+}
+
+.pad-top-600 {
+  padding-top: 1.6rem;
+}
+
+.pad-top-700 {
+  padding-top: 2rem;
+}
+
+.pad-top-900 {
+  padding-top: 3rem;
+}
+
+.pad-right-300 {
+  padding-right: 0.8rem;
+}
+
+.pad-right-400 {
+  padding-right: 1rem;
+}
+
+.pad-right-500 {
+  padding-right: 1.25rem;
+}
+
+.pad-right-600 {
+  padding-right: 1.6rem;
+}
+
+.pad-right-700 {
+  padding-right: 2rem;
+}
+
+.pad-right-900 {
+  padding-right: 3rem;
+}
+
+.pad-bottom-300 {
+  padding-bottom: 0.8rem;
+}
+
+.pad-bottom-400 {
+  padding-bottom: 1rem;
+}
+
+.pad-bottom-500 {
+  padding-bottom: 1.25rem;
+}
+
+.pad-bottom-600 {
+  padding-bottom: 1.6rem;
+}
+
+.pad-bottom-700 {
+  padding-bottom: 2rem;
+}
+
+.pad-bottom-900 {
+  padding-bottom: 3rem;
+}
+
+.pad-left-300 {
+  padding-left: 0.8rem;
+}
+
+.pad-left-400 {
+  padding-left: 1rem;
+}
+
+.pad-left-500 {
+  padding-left: 1.25rem;
+}
+
+.pad-left-600 {
+  padding-left: 1.6rem;
+}
+
+.pad-left-700 {
+  padding-left: 2rem;
+}
+
+.pad-left-900 {
+  padding-left: 3rem;
+}
+
+.stack-300 {
+  z-index: 0;
+}
+
+.stack-400 {
+  z-index: 10;
+}
+
+.stack-500 {
+  z-index: 20;
+}
+
+.stack-600 {
+  z-index: 30;
+}
+
+.stack-700 {
+  z-index: 40;
+}
+
+.text-300 {
+  font-size: 0.8rem;
+}
+
+.text-400 {
+  font-size: 1rem;
+}
+
+.text-500 {
+  font-size: 1.25rem;
+}
+
+.text-600 {
+  font-size: 1.6rem;
+}
+
+.text-700 {
+  font-size: 2rem;
+}
+
+.text-900 {
+  font-size: 3rem;
+}
+
+.weight-light {
+  font-weight: 300;
+}
+
+.weight-regular {
+  font-weight: 400;
+}
+
+.weight-bold {
+  font-weight: 700;
+}
+
+.width-full {
+  width: 100%;
+}
+
+.width-half {
+  width: 50%;
+}
+
+.width-quarter {
+  width: 25%;
+}
+
+.width-third {
+  width: 33.33333%;
+}
+
+@media (min-width: 36em) {
+  .sm\:box-block {
+    display: block;
+  }
+  .sm\:box-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .sm\:box-hide {
+    display: none;
+  }
+  .sm\:box-show {
+    display: inherit;
+  }
+  .sm\:text-300 {
+    font-size: 0.8rem;
+  }
+  .sm\:text-400 {
+    font-size: 1rem;
+  }
+  .sm\:text-500 {
+    font-size: 1.25rem;
+  }
+  .sm\:text-600 {
+    font-size: 1.6rem;
+  }
+  .sm\:text-700 {
+    font-size: 2rem;
+  }
+  .sm\:text-900 {
+    font-size: 3rem;
+  }
+  .sm\:width-full {
+    width: 100%;
+  }
+  .sm\:width-half {
+    width: 50%;
+  }
+  .sm\:width-quarter {
+    width: 25%;
+  }
+  .sm\:width-third {
+    width: 33.33333%;
+  }
+}
+
+@media (min-width: 48em) {
+  .md\:box-block {
+    display: block;
+  }
+  .md\:box-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .md\:box-hide {
+    display: none;
+  }
+  .md\:box-show {
+    display: inherit;
+  }
+  .md\:text-300 {
+    font-size: 0.8rem;
+  }
+  .md\:text-400 {
+    font-size: 1rem;
+  }
+  .md\:text-500 {
+    font-size: 1.25rem;
+  }
+  .md\:text-600 {
+    font-size: 1.6rem;
+  }
+  .md\:text-700 {
+    font-size: 2rem;
+  }
+  .md\:text-900 {
+    font-size: 3rem;
+  }
+  .md\:width-full {
+    width: 100%;
+  }
+  .md\:width-half {
+    width: 50%;
+  }
+  .md\:width-quarter {
+    width: 25%;
+  }
+  .md\:width-third {
+    width: 33.33333%;
+  }
+}
+
+@media (min-width: 62em) {
+  .lg\:box-block {
+    display: block;
+  }
+  .lg\:box-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .lg\:box-hide {
+    display: none;
+  }
+  .lg\:box-show {
+    display: inherit;
+  }
+  .lg\:text-300 {
+    font-size: 0.8rem;
+  }
+  .lg\:text-400 {
+    font-size: 1rem;
+  }
+  .lg\:text-500 {
+    font-size: 1.25rem;
+  }
+  .lg\:text-600 {
+    font-size: 1.6rem;
+  }
+  .lg\:text-700 {
+    font-size: 2rem;
+  }
+  .lg\:text-900 {
+    font-size: 3rem;
+  }
+  .lg\:width-full {
+    width: 100%;
+  }
+  .lg\:width-half {
+    width: 50%;
+  }
+  .lg\:width-quarter {
+    width: 25%;
+  }
+  .lg\:width-third {
+    width: 33.33333%;
+  }
+}
+
+/* GORKO: auto-generated utility classes end */
+.bg-black {
+  background-color: #151515;
+}
+
+.bg-white {
+  background-color: #FAFAFA;
+}
+
+.font-black {
+  color: #151515;
+}
+
+.font-grey {
+  color: #686868;
+}
+
+.font-white {
+  color: #FAFAFA;
+}
+
+.full-bleed {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+}
+
+.flow > * + * {
+  margin-top: 1.25rem;
+}
+
+@media screen and (min-width: 48em) {
+  .flow > * + * {
+    margin-top: 3rem;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+@media (min-width: 48em) {
+  .text-left-md {
+    text-align: left;
+  }
+}
+
+.flex-gap-400 {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  gap: 1rem;
+}
+
+.app-container {
+  font-family: "Epilogue", sans-serif;
+  padding: 1rem;
+}
+
+@media (min-width: 48em) {
+  .app-container {
+    padding: 2rem;
+  }
+}
+
+.hero-button {
+  border: none;
+  display: block;
+  border-radius: 1rem;
+  padding-block: 0.8rem;
+  padding-inline: 1.25rem;
+  margin-inline: auto;
+}
+
+@media (min-width: 48em) {
+  .hero-button {
+    margin-left: 0;
+  }
+}
+
+.hero__content {
+  margin-top: 3rem;
+}
+
+@media (min-width: 48em) {
+  .hero__content {
+    margin-block: auto;
+  }
+}
+
+.endorsement-container {
+  margin-top: 3rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.logo {
+  height: 2rem;
+}
+
+.menu {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.menu__nav:not(.active) {
+  display: none;
+}
+
+.hamburger {
+  border: none;
+  background-color: unset;
+  background-image: url("/icons/icon-menu.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 2rem;
+}
+
+.hamburger.active {
+  background-image: url("/icons/icon-close-menu.svg");
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+@media screen and (min-width: 48em) {
+  h1 {
+    font-size: 5rem;
+    line-height: 5rem;
+  }
+}
+
+main {
+  margin-inline: auto;
+  max-width: 72rem;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 1rem;
+}
+/*# sourceMappingURL=global.css.map */

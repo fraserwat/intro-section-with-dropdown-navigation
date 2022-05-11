@@ -1,0 +1,11 @@
+.hero-button {
+    border: none;
+    display: block;
+    border-radius: get-size('400');
+    padding-block: get-size('300');
+    padding-inline: get-size('500');
+    margin-inline: auto;
+    @media (min-width: 48em) {
+        margin-left: 0;
+    }
+}

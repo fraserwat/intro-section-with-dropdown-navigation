@@ -1,0 +1,36 @@
+@import "reset";
+@import "../node_modules/gorko/gorko.scss";
+@import "config";
+
+// Utility
+@import "utility/full-bleed";
+@import "utility/flow";
+@import "utility/text-center";
+@import "utility/text-left";
+@import "utility/flex-gap";
+
+// Blocks
+@import "blocks/app-container";
+@import "blocks/hero-button";
+@import "blocks/hero__content";
+@import "blocks/endorsement-container";
+@import "blocks/logo";
+@import "blocks/menu";
+@import "blocks/menu__nav";
+@import "blocks/hamburger";
+
+h1 {
+    font-size: get-size('700');
+    @media screen and (min-width: 48em) {
+        font-size: 5rem;
+        line-height: 5rem;
+    }
+}
+
+main {
+    margin-inline: auto;
+    max-width: 72rem;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    gap: get-size('400');
+}

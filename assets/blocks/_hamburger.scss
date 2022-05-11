@@ -1,0 +1,12 @@
+.hamburger {
+    border: none;
+    background-color: unset;
+    background-image: url('/icons/icon-menu.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: get-size('700');
+}
+.hamburger.active {
+    background-image: url('/icons/icon-close-menu.svg');
+}

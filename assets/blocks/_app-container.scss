@@ -1,0 +1,8 @@
+.app-container {
+    font-family: "Epilogue", sans-serif;
+
+    padding: get-size('400');
+    @media (min-width: 48em) {
+        padding: get-size('700');
+    }
+}
