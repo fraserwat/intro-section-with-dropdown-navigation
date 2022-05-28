@@ -1,17 +1,17 @@
 <template>
   <header>
     <img src="/images/logo.svg" alt="Snap" class="logo">
-    <button aria-label="Menu" class="[ menu dropdown ]" @click="menuToggle"></button>
-    <nav class="menu__nav">
+    <button aria-label="Menu" class="[ hamburger ] [ menu dropdown ]" @click="menuToggle"></button>
+    <nav class="[ menu__nav ] [ font-grey ]">
       <ul>
-        <li class="[ dropdown ]" @click="menuToggle">Features</li>
+        <li class="[ dropdown ]" @click="menuToggle" ref="submenuOne">Features</li>
         <ul>
-          <li><i class="icon-todo"></i>Todo List</li>
-          <li><i class="icon-calendar"></i>Calendar</li>
-          <li><i class="icon-reminders"></i>Reminders</li>
-          <li><i class="icon-planning"></i>Planning</li>
+          <li><i><img src="/icons/icon-todo.svg" alt=""></i>Todo List</li>
+          <li><i><img src="/icons/icon-calendar.svg" alt=""></i>Calendar</li>
+          <li><i><img src="/icons/icon-reminders.svg" alt=""></i>Reminders</li>
+          <li><i><img src="/icons/icon-planning.svg" alt=""></i>Planning</li>
         </ul>
-        <li class="[ dropdown ]" @click="menuToggle">Company</li>
+        <li class="[ dropdown ]" @click="menuToggle" ref="submenuTwo">Company</li>
         <ul>
           <li>History</li>
           <li>Our Team</li>
@@ -30,11 +30,16 @@
 export default {
   methods: {
     menuToggle: function (event) {
-      event.target.classList.toggle('active')
-      if (event.target.classList.contains('menu') && !event.target.classList.contains('active')) {
-        [...this.$el.querySelectorAll('.dropdown')].forEach(function (ddm) {
-          ddm.classList.remove('active');
-        })
+      if (event.target.classList.contains('menu') && event.target.classList.contains('active')) {
+        event.target.classList.add('slide-out');
+        setTimeout(function () {
+          event.target.classList.remove('slide-out');
+          event.target.classList.remove('active');
+        }, 250);
+        this.$refs.submenuOne.classList.remove('active');
+        this.$refs.submenuTwo.classList.remove('active');
+      } else {
+        event.target.classList.toggle('active')
       }
     }
   },

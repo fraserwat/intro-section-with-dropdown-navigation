@@ -521,7 +521,8 @@ li, ul {
   color: #151515;
 }
 
-.font-grey {
+.font-grey,
+.font-grey button {
   color: #686868;
 }
 
@@ -535,7 +536,7 @@ li, ul {
 }
 
 .flow > * + * {
-  margin-top: 1.25rem;
+  margin-top: 1.6rem;
 }
 
 @media screen and (min-width: 48em) {
@@ -619,8 +620,234 @@ li, ul {
           justify-content: space-between;
 }
 
-.menu__nav:not(.active) {
+.dropdown + *:not(.active + *) {
   display: none;
+}
+
+@media screen and (min-width: 48em) {
+  button.dropdown + *:not(.active + *) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.menu__nav {
+  position: absolute;
+  -webkit-animation: fadein .3s;
+          animation: fadein .3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.menu__nav > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: white;
+  width: calc(100% / 3 * 2);
+  height: 100%;
+  padding-top: 5rem;
+  padding-inline: 1.5rem;
+}
+
+.menu__nav > ul > button {
+  border: none;
+  background-color: unset;
+}
+
+.menu__nav > ul > button:last-of-type {
+  outline: #9C9C9C 1.5px solid;
+  outline-offset: -1.5px;
+  border-radius: 14px;
+  padding-block: .5rem;
+}
+
+li.dropdown + ul > li {
+  padding-left: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: .8rem;
+}
+
+li.dropdown + ul > li + li {
+  margin-top: 1rem;
+}
+
+.active + .menu__nav > ul {
+  -webkit-animation: slideIn .3s;
+          animation: slideIn .3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.slide-out + .menu__nav > ul {
+  -webkit-animation: slideOut .35s;
+          animation: slideOut .35s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.slide-out + .menu__nav {
+  -webkit-animation: fadeOut .35s;
+          animation: fadeOut .35s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+li.dropdown {
+  position: relative;
+}
+
+li.dropdown::after {
+  position: absolute;
+  height: 100%;
+  width: .8rem;
+  content: "";
+  background-image: url("/icons/icon-arrow-down.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  -webkit-transition: .15s ease-in-out;
+  transition: .15s ease-in-out;
+  -webkit-transform: translateX(0.5rem);
+          transform: translateX(0.5rem);
+}
+
+li.dropdown.active::after {
+  -webkit-transform: translateX(0.5rem) rotate(180deg);
+          transform: translateX(0.5rem) rotate(180deg);
+}
+
+@media screen and (min-width: 48em) {
+  .menu__nav {
+    background-color: rgba(0, 0, 0, 0);
+    position: relative;
+    width: unset;
+    height: unset;
+    overflow: visible;
+  }
+  nav {
+    background-color: rgba(0, 0, 0, 0) !important;
+  }
+  .menu__nav > ul {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding-top: unset;
+    width: unset;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+  }
+  li.dropdown {
+    margin-right: 1.25rem;
+    position: relative;
+  }
+  li.dropdown.active + ul {
+    position: absolute;
+    top: 0;
+    left: unset;
+    right: unset;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@-webkit-keyframes fadein {
+  from {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+}
+
+@keyframes fadein {
+  from {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  from {
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+
+@-webkit-keyframes slideIn {
+  from {
+    -webkit-transform: translateX(100vw);
+            transform: translateX(100vw);
+  }
+  to {
+    -webkit-transform: translateX(33.33333vw);
+            transform: translateX(33.33333vw);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    -webkit-transform: translateX(100vw);
+            transform: translateX(100vw);
+  }
+  to {
+    -webkit-transform: translateX(33.33333vw);
+            transform: translateX(33.33333vw);
+  }
+}
+
+@-webkit-keyframes slideOut {
+  from {
+    -webkit-transform: translateX(33.33333vw);
+            transform: translateX(33.33333vw);
+  }
+  to {
+    -webkit-transform: translateX(100vw);
+            transform: translateX(100vw);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    -webkit-transform: translateX(33.33333vw);
+            transform: translateX(33.33333vw);
+  }
+  to {
+    -webkit-transform: translateX(100vw);
+            transform: translateX(100vw);
+  }
 }
 
 .hamburger {
@@ -635,6 +862,13 @@ li, ul {
 
 .hamburger.active {
   background-image: url("/icons/icon-close-menu.svg");
+  z-index: 2;
+}
+
+@media screen and (min-width: 48em) {
+  .hamburger {
+    display: none;
+  }
 }
 
 h1 {

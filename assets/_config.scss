@@ -13,7 +13,8 @@ $gorko-colors: (
 .font-black {
     color: get-color('black');
 }
-.font-grey {
+.font-grey,
+.font-grey button {
     color: get-color('grey');
 }
 .font-white {

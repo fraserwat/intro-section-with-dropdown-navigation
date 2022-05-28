@@ -1,6 +1,147 @@
-.menu__nav {
+.dropdown + *:not(.active + *) {
+    display: none;
+}
+@media screen and (min-width: $breakpoint) {
+    button.dropdown + *:not(.active + *) {
+        display: flex;
+    }
 }
 
-.menu__nav:not(.active) {
-    display: none;
+// MOBILE
+.menu__nav {
+    position: absolute;
+    animation: fadein .3s;
+    animation-fill-mode: forwards;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+.menu__nav > ul {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    background-color: white;
+
+    width: calc(100% / 3 * 2);
+    height: 100%;
+
+    padding-top: 5rem;
+    padding-inline: 1.5rem;
+}
+.menu__nav > ul > button {
+    border: none;
+    background-color: unset;
+}
+.menu__nav > ul > button:last-of-type {
+    outline: #9C9C9C 1.5px solid;
+    outline-offset: -1.5px;
+    border-radius: 14px;
+    padding-block: .5rem;
+}
+li.dropdown + ul > li {
+    padding-left: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+}
+li.dropdown + ul > li + li {
+    margin-top: 1rem;
+}
+// Animation Classes
+.active + .menu__nav > ul {
+    animation: slideIn .3s;
+    animation-fill-mode: forwards;
+}
+.slide-out + .menu__nav > ul {
+    animation: slideOut .35s;
+    animation-fill-mode: forwards;
+}
+.slide-out + .menu__nav {
+    animation: fadeOut .35s;
+    animation-fill-mode: forwards;
+}
+li.dropdown {
+    position: relative;
+}
+li.dropdown::after {
+    position: absolute;
+    height: 100%;
+    width: .8rem;
+    content: "";
+    background-image: url('/icons/icon-arrow-down.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    transition: .15s ease-in-out;
+    transform: translateX(.5rem);
+}
+li.dropdown.active::after {
+    transform: translateX(.5rem) rotate(180deg);
+}
+// DESKTOP
+@media screen and (min-width: $breakpoint) {
+    .menu__nav {
+        background-color: rgba($color: #000000, $alpha: 0);
+        position: relative;
+        width: unset;
+        height: unset;
+        overflow: visible;
+    }
+    nav {
+        background-color: rgba($color: #000000, $alpha: 0) !important;
+    }
+    .menu__nav > ul {
+        flex-direction: row;
+        padding-top: unset;
+        width: unset;
+        align-items: center;
+        position: relative;
+    }
+    li.dropdown {
+        margin-right: 1.25rem;
+        position: relative;
+    }
+    li.dropdown.active + ul {
+        position: absolute;
+        top: 0;
+        left: unset;
+        right: unset;
+        transform: none;
+    }
+}
+
+// ANIMATIONS
+@keyframes fadein {
+    from {
+        background-color: rgba($color: #000000, $alpha: 0);
+    }
+    to {
+        background-color: rgba($color: #000000, $alpha: 0.75);
+    }
+}
+@keyframes fadeOut {
+    from {
+        background-color: rgba($color: #000000, $alpha: 0.75);
+    }
+    to {
+        background-color: rgba($color: #000000, $alpha: 0);
+    }
+}
+@keyframes slideIn {
+    from {
+        transform: translateX(100vw);
+    }
+    to {
+        transform: translateX(100vw - (100vw / 3 * 2));
+    }
+}
+@keyframes slideOut {
+    from {
+        transform: translateX(100vw - (100vw / 3 * 2));
+    }
+    to {
+        transform: translateX(100vw);
+    }
 }

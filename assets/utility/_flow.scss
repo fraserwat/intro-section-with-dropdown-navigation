@@ -1,8 +1,8 @@
 .flow > * + * {
-    margin-top: get-size("500");
+    margin-top: get-size("600");
 }
 
-@media screen and (min-width: 48em) {
+@media screen and (min-width: $breakpoint) {
     .flow > * + * {
         margin-top: get-size("900");
     }

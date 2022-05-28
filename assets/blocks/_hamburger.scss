@@ -9,4 +9,11 @@
 }
 .hamburger.active {
     background-image: url('/icons/icon-close-menu.svg');
+    z-index: 2;
+}
+
+@media screen and (min-width: $breakpoint) {
+    .hamburger {
+        display: none;
+    }
 }
