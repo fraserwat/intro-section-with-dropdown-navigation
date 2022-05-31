@@ -1,24 +1,28 @@
 <template>
   <header>
-    <img src="/images/logo.svg" alt="Snap" class="logo">
+    <img src="/images/logo.svg" alt="Snap" class="logo" tabindex="0">
     <button aria-label="Menu" class="[ hamburger ] [ menu dropdown ]" @click="menuToggle"></button>
     <nav class="[ menu__nav ] [ font-grey ]">
       <ul>
-        <li class="[ dropdown ]" @click="menuToggle" ref="submenuOne">Features</li>
-        <ul>
-          <li><i><img src="/icons/icon-todo.svg" alt=""></i>Todo List</li>
-          <li><i><img src="/icons/icon-calendar.svg" alt=""></i>Calendar</li>
-          <li><i><img src="/icons/icon-reminders.svg" alt=""></i>Reminders</li>
-          <li><i><img src="/icons/icon-planning.svg" alt=""></i>Planning</li>
-        </ul>
-        <li class="[ dropdown ]" @click="menuToggle" ref="submenuTwo">Company</li>
-        <ul>
-          <li>History</li>
-          <li>Our Team</li>
-          <li>Blog</li>
-        </ul>
-        <li>Careers</li>
-        <li>About</li>
+        <div class="list-container">
+          <li class="[ dropdown ]" @click="menuToggle" @keypress="menuToggle" ref="submenuOne" tabindex="0">Features</li>
+          <ul>
+            <li><a href=""><i><img src="/icons/icon-todo.svg" alt=""></i>Todo List</a></li>
+            <li><a href=""><i><img src="/icons/icon-calendar.svg" alt=""></i>Calendar</a></li>
+            <li><a href=""><i><img src="/icons/icon-reminders.svg" alt=""></i>Reminders</a></li>
+            <li><a href=""><i><img src="/icons/icon-planning.svg" alt=""></i>Planning</a></li>
+          </ul>
+        </div>
+        <div class="list-container">
+          <li class="[ dropdown ]" @click="menuToggle" @keypress="menuToggle" ref="submenuTwo" tabindex="0">Company</li>
+          <ul>
+            <li><a href="">History</a></li>
+            <li><a href="">Our Team</a></li>
+            <li><a href="">Blog</a></li>
+          </ul>
+        </div>
+        <li><a href="">Careers</a></li>
+        <li><a href="">About</a></li>
         <button>Login</button>
         <button>Register</button>
       </ul>

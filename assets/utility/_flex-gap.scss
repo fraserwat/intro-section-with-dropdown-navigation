@@ -1,8 +1,14 @@
 @mixin flex-gap($n) {
     display: inline-flex;
+    gap: $n;
     gap: get-size($n);
 }
 
 .flex-gap-400 {
     @include flex-gap('400');
 }
+// @media screen and (min-width: $breakpoint) {
+//     .flex-gap-8rem {
+//         @include flex-gap(8rem);
+//     }
+// }

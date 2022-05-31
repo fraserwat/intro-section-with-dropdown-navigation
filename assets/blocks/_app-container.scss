@@ -1,8 +1,11 @@
 .app-container {
     font-family: "Epilogue", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 
     padding: get-size('400');
     @media (min-width: 48em) {
-        padding: get-size('700');
+        padding: 40px;
     }
 }

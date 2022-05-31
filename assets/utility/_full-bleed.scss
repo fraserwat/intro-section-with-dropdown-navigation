@@ -1,5 +1,12 @@
-.full-bleed {
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
+@media screen and (max-width: $breakpoint) {
+    .full-bleed {
+        width: 100vw;
+        margin-left: calc(50% - 50vw);
+    }        
 }
-  
+@media screen and (min-width: $breakpoint) {
+    .full-bleed-md {
+        width: 100vw;
+        margin-left: calc(50% - 50vw);
+    }        
+}

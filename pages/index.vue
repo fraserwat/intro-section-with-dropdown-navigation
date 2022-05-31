@@ -1,7 +1,7 @@
 <template>
-  <div class="[ app-container ] [  ]">
-    <menu-header class="[ menu ] [ pad-bottom-600 box-flex ]"/>
-    <main class="md:box-flex flex-gap-8rem">
+  <div class="[ app-container ] [ max-width-1500 ]">
+    <menu-header class="[ menu ] [ pad-bottom-600 box-flex full-bleed-md ]"/>
+    <main class="md:box-flex flex-between">
       <section class="[ hero__image-container ] [ full-bleed ]">
         <picture>
           <source media="(min-width: 48em)" srcset="/images/image-hero-desktop.png">
