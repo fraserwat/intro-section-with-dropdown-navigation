@@ -1001,7 +1001,8 @@ a {
 }
 
 a:hover,
-button:hover {
+button:hover,
+li.dropdown:hover {
   -webkit-transition: .2s ease-in-out;
   transition: .2s ease-in-out;
   cursor: pointer;

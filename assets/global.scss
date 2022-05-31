@@ -51,7 +51,8 @@ a {
     color: unset;
 }
 a:hover,
-button:hover {
+button:hover,
+li.dropdown:hover {
     transition: .2s ease-in-out;
     cursor: pointer;
     color: black;
