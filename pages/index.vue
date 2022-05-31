@@ -1,5 +1,5 @@
 <template>
-  <div class="[ app-container ] [ max-width-1500 ]">
+  <div class="[ app-container ] [ max-width-1100 ]">
     <menu-header class="[ menu ] [ pad-bottom-600 box-flex full-bleed-md ]"/>
     <main class="md:box-flex flex-between">
       <section class="[ hero__image-container ] [ full-bleed ]">
